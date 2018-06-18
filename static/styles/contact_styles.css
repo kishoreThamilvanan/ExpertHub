@@ -1252,6 +1252,7 @@ select option
 .contact_info_container
 {
     margin:12px;
+	width:200%;
 }
 
 /*********************************
@@ -1681,4 +1682,14 @@ select option
 .logos_list li:last-child
 {
 	margin-right: 0px;
+}
+
+/*
+codes below are written by Rongan Li
+ */
+#search_container
+{
+   padding-left: 40%;
+   padding-top:2%;
+
 }

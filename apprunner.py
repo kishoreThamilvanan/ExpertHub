@@ -14,9 +14,11 @@ mysql.init_app(app)
 conn = mysql.connect()
 cursor =conn.cursor()
 
-cursor.execute("SELECT * from clients")
+cursor.execute("SELECT s.email,c.firstname,c.lastname, s.category, s.skillname, s.charge, s.rateByHour,c.profileDirectory FROM skills s, clients c WHERE c.email = s.email;")
 data = cursor.fetchall()
 
+for each in data:
+    print(each[0])
 
 
 @app.route("/")

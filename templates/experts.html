@@ -198,62 +198,36 @@
 		<!-- Menu -->
 	</header>
 
+
+
 	<!-- Contact Info -->
 
 	<div class="contact_info">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="../static/profile_pictures/(eric.kim@gmail.com).jpg" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_name_title">Eric Kim</div>
-								<div class="service_category_text">Education & Tutoring:</div>
-								<div class="service_category_text">Math Tutoring</div>
-								<div class="service_category_text">Price: $200 per 1 hour</div>
-							</div>
-						</div>
 
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="../static/profile_pictures/(eric.kim@gmail.com).jpg" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_name_title">Eric Kim</div>
-								<div class="service_category_text">Education & Tutoring:</div>
-								<div class="service_category_text">Math Tutoring</div>
-								<div class="service_category_text">Price: $200 per 1 hour</div>
-							</div>
-						</div>
-					</div>
-					<div class="contact_info_container d-flex flex-lg-row flex-item justify-content-between align-items-between">
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="../static/profile_pictures/(eric.kim@gmail.com).jpg" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_name_title">Eric Kim</div>
-								<div class="service_category_text">Education & Tutoring:</div>
-								<div class="service_category_text">Math Tutoring</div>
-								<div class="service_category_text">Price: $200 per 1 hour</div>
-							</div>
-						</div>
 
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="../static/profile_pictures/(eric.kim@gmail.com).jpg" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_name_title">Eric Kim</div>
-								<div class="service_category_text">Education & Tutoring:</div>
-								<div class="service_category_text">Math Tutoring</div>
-								<div class="service_category_text">Price: $200 per 1 hour</div>
-							</div>
-						</div>
-					</div>
+                {% for each in data %}
+
+			    	    <div class="col-lg-10 offset-lg-1">
+					        <div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
+                                <!-- Contact Item -->
+						        <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
+						        	<div class="contact_info_image"><img src={{ each[7] }} alt=""></div>
+                                    <div class="contact_info_content">
+							        	<div class="contact_name_title">{{ each[1] }} {{ each[2] }}</div>
+							        	<div class="service_category_text">{{ each[3] }}:</div>
+							        	<div class="service_category_text">{{ each[4] }}</div>
+								        <div class="service_category_text">Price: $ {{ each[5] }} per {{ each[6] }} hour</div>
+							        </div>
+					        	</div>
+                        </div>
 				</div>
-			</div>
-		</div>
-	</div>
+
+            {% endfor %}
+
+        	</div>
+
+
 
 	<!-- Contact Form -->
 
